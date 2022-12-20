@@ -1,0 +1,150 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <title>Lec16</title>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Bootstrap CSS v5.2.0-beta1 -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css"
+    integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+
+  <!-- <link rel="stylesheet" href="css/style.css"> -->
+  <style>
+    .animal-show-case img {
+      margin: 8px;
+      padding: 8px;
+      width: 100px;
+      cursor: pointer;
+    }
+
+    .chosen-animal {
+      border-radius: 8px;
+      border: 3px dashed dodgerblue;
+    }
+
+    .aa {
+      display: none;
+    }
+
+    .bb {
+      overflow: hidden;
+
+      @keyframes change-color {
+        0% {
+          background-color: red;
+          transform: translateX(100px);
+        }
+
+        25% {
+          background-color: yellow;
+          transform: translateX(80px);
+        }
+
+        50% {
+          background-color: blue;
+          transform: translateX(120px);
+        }
+
+        100% {
+          background-color: green;
+          transform: translateX(140px);
+        }
+      }
+
+      .zz {}
+
+
+      .rounded {
+        width: 200px;
+        height: 200px;
+        border-radius: 50%;
+        border: 3px solid rgba(0, 0, 0, 0.2);
+        border-top: 3px solid dodgerblue;
+
+        animation: activity-indicator infinite linear 4s;
+      }
+
+      @keyframes activity-indicator {
+        from {
+          transform: rotate(0deg);
+        }
+
+        to {
+          transform: rotate(360deg);
+        }
+      }
+
+      @keyframes slide-in-up {
+        from {
+          transform: translate3d(0, 100%, 0);
+          visibility: visible;
+        }
+
+        to {
+          transform: translate3d(0, 0, 0);
+        }
+      }
+
+
+      @keyframes bounce {
+
+        from,
+        20%,
+        53%,
+        to {
+          animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+          transform: translate3d(0, 0, 0);
+        }
+
+        40%,
+        43% {
+          animation-timing-function: cubic-bezier(0.755, 0.05, 0.855, 0.06);
+          transform: translate3d(0, -30px, 0) scaleY(1.1);
+        }
+
+        70% {
+          animation-timing-function: cubic-bezier(0.755, 0.05, 0.855, 0.06);
+          transform: translate3d(0, -15px, 0) scaleY(1.05);
+        }
+
+        80% {
+          transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+          transform: translate3d(0, 0, 0) scaleY(0.95);
+        }
+
+        90% {
+          transform: translate3d(0, -4px, 0) scaleY(1.02);
+        }
+      }
+
+      .box {
+        animation-name: bounce;
+        transform-origin: center bottom;
+        animation-duration: 2s;
+        animation-iteration-count: infinite;
+
+      }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <button class="btn btn-info text-light aa" id="btn-start">
+      Start Game
+    </button>
+    <button class="btn btn-info text-light" id="mtbtn">start</button>
+
+    <div class="animal-show-case row bb" id="animal-show-case">
+
+    </div>
+
+    <!-- after click start -> arange the animals -->
+  </div>
+
+  <script type="module" src="./js/lec111.js"></script>
+</body>
+
+</html>
